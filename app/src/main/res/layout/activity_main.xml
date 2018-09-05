@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/hero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintDimensionRatio="18:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/avatar1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:tint="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/avatar2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:tint="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintEnd_toStartOf="@id/x_textview"
+        app:layout_constraintStart_toEndOf="@id/avatar1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/x_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintEnd_toStartOf="@id/avatar2"
+        app:layout_constraintStart_toEndOf="@id/x_textview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/match"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:text="Placar:"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/x_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/hero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hero"
+        app:srcCompat="@drawable/ic_autorenew_black_24dp" />
+
+    <TextView
+        android:id="@+id/local1"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Local:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/local2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hero" />
+
+    <TextView
+        android:id="@+id/local2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:text="Maracana"
+        app:layout_constraintEnd_toStartOf="@+id/fab"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/local1"
+        app:layout_constraintTop_toBottomOf="@+id/hero" />
+
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horario:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/time2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/fab"
+        app:layout_constraintTop_toBottomOf="@+id/hero" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="4dp"
+        android:text="21:45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/hero" />
+
+
+    <!-- POSSE DE BOLA -->
+    <TextView
+        android:id="@+id/possession_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/local1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Posse de bola" />
+
+    <View
+        android:id="@+id/possession1"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/possession_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/possession2"
+        app:layout_constraintWidth_percent=".65"
+        android:background="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/possession2"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/possession1"
+        app:layout_constraintTop_toBottomOf="@id/possession_title"
+        android:background="@color/colorAccent" />
+
+
+    <TextView
+        android:id="@+id/stat1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/possession1"
+        app:layout_constraintStart_toStartOf="@id/possession1"
+        android:text="Chutes:" />
+
+    <TextView
+        android:id="@+id/stat2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/stat1_title"
+        app:layout_constraintStart_toStartOf="@id/possession1"
+        android:text="Chutes a gol:" />
+
+    <TextView
+        android:id="@+id/stat3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/stat2_title"
+        app:layout_constraintStart_toStartOf="@id/possession1"
+        android:text="Defesas:" />
+
+    <TextView
+        android:id="@+id/stat1_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/stat1_title"
+        app:layout_constraintBottom_toBottomOf="@id/stat1_title"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        android:text="12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/stat2_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/stat2_title"
+        app:layout_constraintBottom_toBottomOf="@id/stat2_title"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        android:text="5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/stat3_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/stat3_title"
+        app:layout_constraintBottom_toBottomOf="@id/stat3_title"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        android:text="4"
+        android:textStyle="bold" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="stat1_title, stat2_title, stat3_title"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="stat1_value, stat2_value, stat3_value"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@id/stat1_title"
+        app:layout_constraintBottom_toBottomOf="@id/stat3_title"
+        app:layout_constraintStart_toEndOf="@id/barrier2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_feedback_black_24dp"
+        app:elevation="0dp"
+        app:fabSize="normal" />
+
+    <TextView
+        android:id="@+id/injuires_suspensions_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stat3_title"
+        android:text="Suspensos e Machucados"
+        android:textStyle="bold" />
+
+    <TextView
+    android:id="@+id/player_name1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:ellipsize="end"
+    android:lines="1"
+    android:maxLines="1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintTop_toBottomOf="@id/injuires_suspensions_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/player_icon1"
+    android:text="Player asd asd sad asd asd" />
+
+    <ImageView
+        android:id="@+id/player_icon1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/player_name1"
+        app:layout_constraintTop_toTopOf="@id/player_name1"
+        app:layout_constraintBottom_toBottomOf="@id/player_name1"
+        app:layout_constraintEnd_toStartOf="@id/divisor"
+        app:srcCompat="@drawable/ic_sim_card_alert_black_24dp" />
+
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/player_icon1"
+        app:layout_constraintTop_toBottomOf="@id/injuires_suspensions_title"
+        android:background="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/more_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/divisor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Ver mais"
+        app:layout_constraintWidth_percent=".50"/>
+
+</android.support.constraint.ConstraintLayout>
