@@ -1,2 +1,2 @@
 # Constraint-Layout-Dojo
-Dojo Exercise to exercisa many Constraint Layouts challenges
+Dojo Exercise to exercise many ConstraintLayouts challenges
